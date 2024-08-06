@@ -1,5 +1,5 @@
 pipeline {
-    agent none {
+    agent any 
         stages {
 
             stage('Checkout') {
@@ -9,20 +9,19 @@ pipeline {
             }
             stage('Build') {
                 steps {
-                    echo 'Building code'
+                    echo "Building code"
                 }
             }
             stage('Test') {
                 steps {
-                    echo 'Testing'
+                    echo "Testing"
                 }
             }
             stage('Deploy') {
 
                 steps {
-                    echo 'Deploying'
+                    echo "Deploying"
                 }
             }
         }
     }
-}
